@@ -112,6 +112,17 @@ h1 {
   text-shadow: 0 0 25px rgba(255,210,130,.4);
 }
 
+.name-link {
+  color: inherit;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.name-link:hover {
+  color: #fff0c5;
+  text-shadow: 0 0 25px #e9c98d;
+}
+
 .ampersand {
   display: block;
   font-size: 35px;
@@ -171,10 +182,6 @@ h1 {
   letter-spacing: 2px;
 }
 
-.location a:hover {
-  background: rgba(217,184,120,.2);
-}
-
 .paris {
   color: #e9c98d;
   letter-spacing: 5px;
@@ -225,13 +232,21 @@ footer {
   <div class="sparkles"></div>
 
   <div class="content">
+
     <div class="small-title">
       THE WEDDING CELEBRATION
     </div>
 
     <h1>
-      JEPRI
+      <a
+        class="name-link"
+        href="https://wa.me/6281274642230"
+        target="_blank"
+        rel="noopener"
+      >JEPRI</a>
+
       <span class="ampersand">&</span>
+
       TARISA
     </h1>
 
@@ -280,10 +295,12 @@ footer {
     <div class="paris">
       PARIS • LOVE • FOREVER
     </div>
+
   </div>
 </section>
 
 <section class="details">
+
   <h2>A Special Day</h2>
 
   <p>
@@ -298,6 +315,7 @@ footer {
     JEPRI & TARISA<br>
     01 Januari 2027
   </p>
+
 </section>
 
 <footer>
