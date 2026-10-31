@@ -4,9 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#14251d">
-
-<title>Wedding JEPRI & TARISA</title>
+<meta name="theme-color" content="#080b16">
+<title>JEPRI & TARISA - Wedding Invitation</title>
 
 <style>
 * {
@@ -15,390 +14,253 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: Georgia, serif;
-  background: #14251d;
-  color: #f5ead5;
-  text-align: center;
-  overflow-x: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: white;
+  background: #080b16;
 }
 
-.container {
-  max-width: 650px;
-  margin: auto;
-  padding: 25px;
-}
-
-section {
-  padding: 65px 0;
-  border-bottom: 1px solid #c6a76b55;
-}
-
-.label {
-  color: #d8bc80;
-  font-size: 12px;
-  letter-spacing: 5px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: clamp(38px, 9vw, 55px);
-  font-weight: normal;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 29px;
-  font-weight: normal;
-  color: #d8bc80;
-  margin-bottom: 25px;
-}
-
-h3 {
-  font-weight: normal;
-}
-
-p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #e5dccb;
-}
-
-.gold {
-  color: #d8bc80;
-}
-
-.ornament {
-  font-size: 35px;
-  color: #d8bc80;
-  margin: 30px 0;
-}
-
-.ampersand {
-  color: #d8bc80;
-  font-style: italic;
-  font-size: 32px;
-}
-
-/* COVER */
-
-.cover {
+.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
-  background: linear-gradient(145deg, #20382b, #14251d, #263e30);
+  text-align: center;
+  padding: 30px 18px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(5,8,18,.45), rgba(5,8,18,.75)),
+    url("https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=2000&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.cover-card {
-  width: 100%;
-  max-width: 480px;
-  padding: 65px 25px;
-  border: 1px solid #d8bc80;
-  border-radius: 180px 180px 25px 25px;
-  box-shadow: 0 0 40px #0005;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,215,140,.15),
+    transparent
+  );
+  animation: glow 6s infinite;
 }
 
-/* FOTO */
+@keyframes glow {
+  0%,100% { opacity: .2; }
+  50% { opacity: 1; }
+}
 
-.photo {
+.sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, #fff5cf, transparent),
+    radial-gradient(2px 2px at 70% 20%, #e9c98d, transparent),
+    radial-gradient(2px 2px at 45% 75%, #fff5cf, transparent),
+    radial-gradient(2px 2px at 85% 65%, #e9c98d, transparent);
+  background-size: 250px 250px;
+  animation: sparkle 9s linear infinite;
+}
+
+@keyframes sparkle {
+  from { background-position: 0 0; }
+  to { background-position: 250px 250px; }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
   width: 100%;
-  object-fit: cover;
-  border: 2px solid #d8bc80;
+  padding: 55px 20px;
+  background: rgba(5,8,18,.55);
+  border: 1px solid rgba(238,205,145,.65);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 50px rgba(218,172,91,.15);
+  animation: appear 2s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.small-title {
+  color: #e9c98d;
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(42px, 9vw, 78px);
+  font-weight: normal;
+  color: #f4dfb2;
+  text-shadow: 0 0 25px rgba(255,210,130,.4);
+}
+
+.ampersand {
   display: block;
+  font-size: 35px;
+  color: white;
+  margin: 8px;
+  font-style: italic;
 }
 
-.main-photo {
-  height: 430px;
-  border-radius: 180px 180px 20px 20px;
-  margin: 30px auto;
+.divider {
+  width: 90px;
+  height: 1px;
+  background: #d9b878;
+  margin: 28px auto;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 30px;
+.subtitle {
+  color: #f5e8d0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 2;
 }
 
-.gallery img {
-  height: 220px;
-  border-radius: 12px;
+.date {
+  font-size: 24px;
+  color: #f4d9a4;
+  letter-spacing: 3px;
 }
 
-/* MEMPELAI */
-
-.couple-name {
-  color: #d8bc80;
-  font-size: 30px;
-  margin: 20px 0;
-}
-
-/* ACARA */
-
-.event-box {
-  border: 1px solid #d8bc80;
-  border-radius: 15px;
-  padding: 30px 15px;
-  margin: 20px 0;
-  background: #20382b;
-}
-
-.event-box h3 {
-  color: #d8bc80;
-  font-size: 23px;
-  margin-bottom: 15px;
-}
-
-/* TOMBOL */
-
-.map-button {
-  display: inline-block;
-  background: #d8bc80;
-  color: #14251d;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 30px;
-  margin-top: 25px;
-  font-size: 12px;
+.time {
+  margin-top: 12px;
+  font-size: 15px;
   letter-spacing: 2px;
 }
 
-.map-button:hover {
-  background: transparent;
-  color: #f5ead5;
-  border: 1px solid #d8bc80;
+.location {
+  color: #e8d9bd;
+  margin-top: 28px;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-/* FOOTER */
+.paris {
+  color: #e9c98d;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+.details {
+  background: #0b0e19;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.details h2 {
+  color: #e9c98d;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.details p {
+  color: #e4dccd;
+  line-height: 2;
+  font-size: 16px;
+}
 
 footer {
-  padding: 60px 15px;
-  line-height: 2;
-  color: #d8bc80;
+  padding: 30px 15px;
+  text-align: center;
+  background: #070912;
+  color: #c9b68f;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
-@media(max-width: 400px) {
-  .main-photo {
-    height: 350px;
-  }
-
-  .gallery img {
-    height: 170px;
-  }
+@media(max-width:600px) {
+  .content { padding: 45px 15px; }
+  .hero { background-attachment: scroll; }
+  .small-title { letter-spacing: 3px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- COVER -->
+<section class="hero">
+  <div class="sparkles"></div>
 
-<div class="cover">
-
-  <div class="cover-card">
-
-    <div class="label">The Wedding Invitation</div>
-
-    <div class="ornament">✧ ❦ ✧</div>
-
-    <p>Dengan penuh kebahagiaan</p>
+  <div class="content">
+    <div class="small-title">
+      THE WEDDING CELEBRATION
+    </div>
 
     <h1>
       JEPRI
-      <div class="ampersand">&</div>
+      <span class="ampersand">&</span>
       TARISA
     </h1>
 
-    <div class="ornament">✧ ❦ ✧</div>
+    <div class="divider"></div>
 
-    <p>Kami mengundang Anda untuk hadir</p>
-
-    <p class="gold" style="margin-top:20px">
-      01 JANUARI 2027
+    <p class="subtitle">
+      WITH LOVE AND HAPPINESS<br>
+      WE INVITE YOU TO CELEBRATE OUR WEDDING
     </p>
 
+    <div class="divider"></div>
+
+    <div class="date">
+      01 . 01 . 2027
+    </div>
+
+    <div class="time">
+      17.00 WIB
+    </div>
+
+    <div class="location">
+      NOVOTEL<br>
+      Indonesia
+    </div>
+
+    <div class="paris">
+      PARIS • LOVE • FOREVER
+    </div>
   </div>
-
-</div>
-
-
-<main class="container">
-
-  <!-- PEMBUKA -->
-
-  <section>
-
-    <div class="label">The Wedding Of</div>
-
-    <div class="ornament">✧ ❦ ✧</div>
-
-    <h1>
-      JEPRI
-      <div class="ampersand">&</div>
-      TARISA
-    </h1>
-
-    <p style="margin-top:25px">
-      Dengan memohon rahmat dan ridho Tuhan,
-      kami bermaksud menyelenggarakan
-      pernikahan kami.
-    </p>
-
-  </section>
-
-
-  <!-- FOTO UTAMA -->
-
-  <section>
-
-    <div class="label">Our Memories</div>
-
-    <h2>Prewedding</h2>
-
-    <img
-      src="images/prewed-utama.jpg"
-      class="photo main-photo"
-      alt="Foto prewedding JEPRI dan TARISA"
-    >
-
-    <p>
-      Dua hati, satu cinta,
-      dan satu perjalanan baru bersama.
-    </p>
-
-  </section>
-
-
-  <!-- PROFIL PENGANTIN -->
-
-  <section>
-
-    <div class="label">The Bride & Groom</div>
-
-    <h2>Mempelai</h2>
-
-    <h3 class="couple-name">JEPRI</h3>
-
-    <p></p>
-
-    <div class="ornament">&</div>
-
-    <h3 class="couple-name">TARISA</h3>
-
-    <p></p>
-
-  </section>
-
-
-  <!-- DETAIL ACARA -->
-
-  <section>
-
-    <div class="label">Wedding Events</div>
-
-    <h2>Detail Acara</h2>
-
-    <div class="event-box">
-
-      <h3>Akad Nikah</h3>
-
-      <p>
-        Jumat, 01 Januari 2027<br>
-        Pukul 17.00 WIB<br>
-        (GMT +7)
-      </p>
-
-    </div>
-
-    <div class="event-box">
-
-      <h3>Resepsi Pernikahan</h3>
-
-      <p>
-        Jumat, 01 Januari 2027<br>
-        Pukul 17.00 WIB<br>
-        (GMT +7)
-      </p>
-
-    </div>
-
-    <h3 class="couple-name">Novotel</h3>
-
-    <p>
-      Lokasi acara pernikahan
-    </p>
-
-    <a
-      class="map-button"
-      href="https://www.google.com/maps/search/?api=1&query=Novotel+Indonesia"
-      target="_blank"
-      rel="noopener"
-    >
-      LIHAT LOKASI
-    </a>
-
-  </section>
-
-
-  <!-- GALERI FOTO -->
-
-  <section>
-
-    <div class="label">Our Gallery</div>
-
-    <h2>Galeri Foto</h2>
-
-    <div class="gallery">
-
-      <img src="images/prewed-2.jpg"
-      class="photo" alt="Prewedding 2">
-
-      <img src="images/prewed-3.jpg"
-      class="photo" alt="Prewedding 3">
-
-      <img src="images/prewed-4.jpg"
-      class="photo" alt="Prewedding 4">
-
-      <img src="images/prewed-utama.jpg"
-      class="photo" alt="Prewedding 5">
-
-    </div>
-
-  </section>
-
-
-  <!-- PENUTUP -->
-
-  <footer>
-
-    <div class="ornament">✧ ❦ ✧</div>
-
-    <h2>Terima Kasih</h2>
-
-    <p>
-      Merupakan suatu kehormatan
-      bagi kami atas kehadiran
-      dan doa restu Anda.
-    </p>
-
-    <h2 style="margin-top:35px">
-      JEPRI & TARISA
-    </h2>
-
-    <p>
-      01 JANUARI 2027
-    </p>
-
-  </footer>
-
-</main>
+</section>
+
+<section class="details">
+  <h2>A Special Day</h2>
+
+  <p>
+    Dengan penuh kebahagiaan,<br>
+    kami mengundang keluarga dan sahabat<br>
+    untuk menjadi bagian dari hari istimewa kami.
+  </p>
+
+  <div class="divider"></div>
+
+  <p>
+    JEPRI & TARISA<br>
+    01 Januari 2027
+  </p>
+</section>
+
+<footer>
+  MADE WITH LOVE — JEPRI & TARISA
+</footer>
 
 </body>
 </html>
