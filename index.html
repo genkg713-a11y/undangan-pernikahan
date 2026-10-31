@@ -1,4 +1,77 @@
 
+
+1 selection
+gas
+GAS BROOO! 🔥 Kita bikin undangan wedding yang lebih premium.
+
+Konsep final kita:
+
+Cover: hijau emerald + emas.
+
+Foto utama: satu foto prewedding besar.
+
+Profil pengantin: nama dan deskripsi kedua mempelai.
+
+Galeri: beberapa foto prewedding.
+
+Countdown: hitung mundur hari pernikahan.
+
+Detail acara: akad dan resepsi.
+
+Google Maps: lokasi pernikahan.
+
+RSVP: konfirmasi kehadiran WhatsApp.
+
+Musik: romantis saat undangan dibuka.
+
+Animasi: background air bergerak.
+
+Cara memasukkan foto nanti
+Di repository GitHub lu, kita buat folder:
+
+undangan-pernikahan/
+│
+├── index.html
+│
+└── images/
+    ├── prewed-utama.jpg
+    ├── prewed-2.jpg
+    ├── prewed-3.jpg
+    └── prewed-4.jpg
+Jadi foto tidak perlu dimasukkan langsung ke kode HTML. Lebih rapi dan gampang diganti.
+
+Sekarang kita lanjut satu tahap dulu, bro.
+Nama kedua mempelai mau pakai nama asli atau sementara kita gunakan Nama Pria dan Nama Wanita?
+
+Nanti gua susun satu kode HTML lengkap yang tinggal lu salin ke GitHub. 😎
+
+kasih ulang aja rumus semua nya bro , gua langsung edit ini bro
+GAS BROOO! 🔥 Kita langsung rombak total index.html lu. Hapus kode lama, lalu ganti dengan kode lengkap di bawah ini.
+
+Versi ini sudah punya:
+
+Cover undangan elegan hijau emerald dan emas.
+
+Tombol buka undangan.
+
+Foto prewedding utama.
+
+Galeri 4 foto.
+
+Profil kedua mempelai.
+
+Countdown pernikahan.
+
+Detail akad dan resepsi.
+
+Tombol Google Maps.
+
+RSVP WhatsApp.
+
+Animasi dekorasi dan musik.
+
+1. Kode lengkap index.html
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -612,3 +685,638 @@ function rsvp() {
 
 </body>
 </html>
+
+2. Susunan folder GitHub
+Buat folder dan file seperti ini:
+
+undangan-pernikahan/
+│
+├── index.html
+│
+├── images/
+│   ├── prewed-utama.jpg
+│   ├── prewed-2.jpg
+│   ├── prewed-3.jpg
+│   └── prewed-4.jpg
+│
+└── music/
+    └── wedding.mp3
+3. Bagian yang wajib lu edit
+Bagian
+
+Yang diganti
+
+Nama Pria
+
+Nama pengantin pria
+
+Nama Wanita
+
+Nama pengantin wanita
+
+Nama Ayah/Ibu
+
+Nama orang tua
+
+01 Januari 2027
+
+Tanggal pernikahan
+
+09.00 WIB
+
+Jam akad
+
+11.00 WIB
+
+Jam resepsi
+
+Nama Gedung
+
+Lokasi pernikahan
+
+6281234567890
+
+Nomor WhatsApp
+
+Penting bro: Tanggal pernikahan harus diganti di dua tempat: bagian HTML dan weddingDate di JavaScript. Kalau tanggalnya berubah, countdown otomatis mengikuti tanggal baru.
+
+4. Cara memasukkan foto
+Upload foto ke folder images di GitHub. Pastikan nama file sama persis dengan yang ada di kode.
+
+Untuk musik, upload file MP3 ke folder music.
+
+Saran gua: Jangan ubah semuanya sekaligus dulu. Masukkan kode ini, simpan dengan tombol Commit changes, lalu buka GitHub Pages untuk melihat hasilnya.
+
+Setelah itu kita bisa poles animasi airnya supaya undangan lu terasa seperti website wedding premium, bro. 😎
+
+Nama Pria : JEPRI
+Nama wanita : Tarisa
+Nama Ayah/Ibu : kosong aja dulu bro
+Tanggal pernikahan : 01 Januari 2027
+Jam acara : 17:00 WIB ( GMT + 7 )
+Nama Gedung : Novotel
+Siap brooo! 🔥 Gua sesuaikan datanya langsung.
+
+Data undangan JEPRI & TARISA:
+
+Detail
+
+Isi
+
+Mempelai pria
+
+JEPRI
+
+Mempelai wanita
+
+TARISA
+
+Orang tua
+
+Kosong dahulu
+
+Tanggal
+
+01 Januari 2027
+
+Waktu
+
+17.00 WIB (GMT+7)
+
+Gedung
+
+Novotel
+
+Akad
+
+17.00 WIB
+
+Resepsi
+
+17.00 WIB
+
+Ganti bagian-bagian berikut di kode HTML lu.
+
+1. Nama pengantin di cover dan halaman utama
+
+<h1>
+  JEPRI
+  <div class="ampersand">&</div>
+  TARISA
+</h1>
+
+2. Profil pengantin
+
+<section class="section">
+
+  <div class="label">The Bride & Groom</div>
+  <h2>Mempelai</h2>
+
+  <h3 class="couple-name">JEPRI</h3>
+
+  <p></p>
+
+  <div class="ornament">&</div>
+
+  <h3 class="couple-name">TARISA</h3>
+
+  <p></p>
+
+</section>
+
+3. Detail acara
+
+<section class="section">
+
+  <div class="label">Wedding Events</div>
+  <h2>Detail Acara</h2>
+
+  <div class="event-box">
+
+    <h3>Akad Nikah</h3>
+
+    <p>
+      Jumat, 01 Januari 2027<br>
+      Pukul 17.00 WIB
+    </p>
+
+  </div>
+
+  <div class="event-box">
+
+    <h3>Resepsi Pernikahan</h3>
+
+    <p>
+      Jumat, 01 Januari 2027<br>
+      Pukul 17.00 WIB
+    </p>
+
+  </div>
+
+  <p style="margin-top:25px">
+    Novotel
+  </p>
+
+</section>
+
+4. Countdown
+
+Pastikan JavaScript menggunakan:
+
+const weddingDate = new Date("2027-01-01T17:00:00+07:00").getTime();
+
+5. Nama di bagian penutup
+
+<h3 style="margin-top:30px">
+  JEPRI & TARISA
+</h3>
+
+Bro, satu hal yang perlu gua pastikan: Novotel yang mana? Novotel punya beberapa lokasi. Nanti kita masukkan alamat dan Google Maps yang tepat supaya tamu tidak salah gedung. 😎
+
+Tolong kasih link full nya bro , gua tinggal salin , gak usah yang menggunakan javascript bro susah
+Siap brooo! Wkwkwk 😂 Kita bikin simpel. Lu tinggal hapus semua kode lama di index.html, lalu salin kode ini seluruhnya.
+
+Gua buat tanpa JavaScript sama sekali. Countdown dan tombol otomatis kita hilangkan dulu supaya gampang diedit.
+
+HTML + CSS saja Tanpa JavaScript
+
+Kode lengkap undangan JEPRI & TARISA
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14251d">
+
+<title>Wedding JEPRI & TARISA</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #14251d;
+  color: #f5ead5;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 25px;
+}
+
+section {
+  padding: 65px 0;
+  border-bottom: 1px solid #c6a76b55;
+}
+
+.label {
+  color: #d8bc80;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 9vw, 55px);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 29px;
+  font-weight: normal;
+  color: #d8bc80;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #e5dccb;
+}
+
+.gold {
+  color: #d8bc80;
+}
+
+.ornament {
+  font-size: 35px;
+  color: #d8bc80;
+  margin: 30px 0;
+}
+
+.ampersand {
+  color: #d8bc80;
+  font-style: italic;
+  font-size: 32px;
+}
+
+/* COVER */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: linear-gradient(145deg, #20382b, #14251d, #263e30);
+}
+
+.cover-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 65px 25px;
+  border: 1px solid #d8bc80;
+  border-radius: 180px 180px 25px 25px;
+  box-shadow: 0 0 40px #0005;
+}
+
+/* FOTO */
+
+.photo {
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid #d8bc80;
+  display: block;
+}
+
+.main-photo {
+  height: 430px;
+  border-radius: 180px 180px 20px 20px;
+  margin: 30px auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  height: 220px;
+  border-radius: 12px;
+}
+
+/* MEMPELAI */
+
+.couple-name {
+  color: #d8bc80;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+/* ACARA */
+
+.event-box {
+  border: 1px solid #d8bc80;
+  border-radius: 15px;
+  padding: 30px 15px;
+  margin: 20px 0;
+  background: #20382b;
+}
+
+.event-box h3 {
+  color: #d8bc80;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+/* TOMBOL */
+
+.map-button {
+  display: inline-block;
+  background: #d8bc80;
+  color: #14251d;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  margin-top: 25px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.map-button:hover {
+  background: transparent;
+  color: #f5ead5;
+  border: 1px solid #d8bc80;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 60px 15px;
+  line-height: 2;
+  color: #d8bc80;
+}
+
+@media(max-width: 400px) {
+  .main-photo {
+    height: 350px;
+  }
+
+  .gallery img {
+    height: 170px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+
+<div class="cover">
+
+  <div class="cover-card">
+
+    <div class="label">The Wedding Invitation</div>
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <p>Dengan penuh kebahagiaan</p>
+
+    <h1>
+      JEPRI
+      <div class="ampersand">&</div>
+      TARISA
+    </h1>
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <p>Kami mengundang Anda untuk hadir</p>
+
+    <p class="gold" style="margin-top:20px">
+      01 JANUARI 2027
+    </p>
+
+  </div>
+
+</div>
+
+
+<main class="container">
+
+  <!-- PEMBUKA -->
+
+  <section>
+
+    <div class="label">The Wedding Of</div>
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <h1>
+      JEPRI
+      <div class="ampersand">&</div>
+      TARISA
+    </h1>
+
+    <p style="margin-top:25px">
+      Dengan memohon rahmat dan ridho Tuhan,
+      kami bermaksud menyelenggarakan
+      pernikahan kami.
+    </p>
+
+  </section>
+
+
+  <!-- FOTO UTAMA -->
+
+  <section>
+
+    <div class="label">Our Memories</div>
+
+    <h2>Prewedding</h2>
+
+    <img
+      src="images/prewed-utama.jpg"
+      class="photo main-photo"
+      alt="Foto prewedding JEPRI dan TARISA"
+    >
+
+    <p>
+      Dua hati, satu cinta,
+      dan satu perjalanan baru bersama.
+    </p>
+
+  </section>
+
+
+  <!-- PROFIL PENGANTIN -->
+
+  <section>
+
+    <div class="label">The Bride & Groom</div>
+
+    <h2>Mempelai</h2>
+
+    <h3 class="couple-name">JEPRI</h3>
+
+    <p></p>
+
+    <div class="ornament">&</div>
+
+    <h3 class="couple-name">TARISA</h3>
+
+    <p></p>
+
+  </section>
+
+
+  <!-- DETAIL ACARA -->
+
+  <section>
+
+    <div class="label">Wedding Events</div>
+
+    <h2>Detail Acara</h2>
+
+    <div class="event-box">
+
+      <h3>Akad Nikah</h3>
+
+      <p>
+        Jumat, 01 Januari 2027<br>
+        Pukul 17.00 WIB<br>
+        (GMT +7)
+      </p>
+
+    </div>
+
+    <div class="event-box">
+
+      <h3>Resepsi Pernikahan</h3>
+
+      <p>
+        Jumat, 01 Januari 2027<br>
+        Pukul 17.00 WIB<br>
+        (GMT +7)
+      </p>
+
+    </div>
+
+    <h3 class="couple-name">Novotel</h3>
+
+    <p>
+      Lokasi acara pernikahan
+    </p>
+
+    <a
+      class="map-button"
+      href="https://www.google.com/maps/search/?api=1&query=Novotel+Indonesia"
+      target="_blank"
+      rel="noopener"
+    >
+      LIHAT LOKASI
+    </a>
+
+  </section>
+
+
+  <!-- GALERI FOTO -->
+
+  <section>
+
+    <div class="label">Our Gallery</div>
+
+    <h2>Galeri Foto</h2>
+
+    <div class="gallery">
+
+      <img src="images/prewed-2.jpg"
+      class="photo" alt="Prewedding 2">
+
+      <img src="images/prewed-3.jpg"
+      class="photo" alt="Prewedding 3">
+
+      <img src="images/prewed-4.jpg"
+      class="photo" alt="Prewedding 4">
+
+      <img src="images/prewed-utama.jpg"
+      class="photo" alt="Prewedding 5">
+
+    </div>
+
+  </section>
+
+
+  <!-- PENUTUP -->
+
+  <footer>
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <h2>Terima Kasih</h2>
+
+    <p>
+      Merupakan suatu kehormatan
+      bagi kami atas kehadiran
+      dan doa restu Anda.
+    </p>
+
+    <h2 style="margin-top:35px">
+      JEPRI & TARISA
+    </h2>
+
+    <p>
+      01 JANUARI 2027
+    </p>
+
+  </footer>
+
+</main>
+
+</body>
+</html>
+
+2. Folder foto di GitHub
+Buat susunan seperti ini:
+
+undangan-pernikahan
+│
+├── index.html
+│
+└── images
+    ├── prewed-utama.jpg
+    ├── prewed-2.jpg
+    ├── prewed-3.jpg
+    └── prewed-4.jpg
+3. Cara edit
+
+Buka repository GitHub lu.
+
+Klik index.html.
+
+Klik ikon pensil (Edit).
+
+Hapus semua kode lama.
+
+Salin seluruh kode baru di atas.
+
+Klik Commit changes.
+
+Siap diedit
+Bro, untuk sementara lokasi Google Maps masih pencarian umum Novotel. Kita belum menentukan cabang hotelnya.
+
+Saran gua: setelah kode ini berhasil tampil di GitHub Pages, kita lanjut bikin animasi air bergerak dan musik wedding. Tanpa JavaScript juga bisa untuk animasi airnya. 😎
+
+
+
+
